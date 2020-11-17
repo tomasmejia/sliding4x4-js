@@ -1,0 +1,110 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #ededed;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 4em;
+  color: #000;
+  visibility: hidden;
+  height: 20%;
+}
+
+.game__grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-column-end: span 3;
+  grid-template-areas:
+    'A B C D'
+    'E F G H'
+    'I J K L'
+    'M N O P';
+}
+
+.tile {
+  background: url('./monks.jpg');
+  background-size: 500%;
+  width: 100px;
+  height: 100px;
+  grid-area: var(--area, auto);
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tile:not([disabled]) {
+  transition: box-shadow 0.3s linear;
+}
+
+.tile:not([disabled]):hover {
+  box-shadow: 0px 0px 7px 0px #000;
+}
+
+.tile[disabled] {
+  cursor: not-allowed;
+}
+
+.empty {
+  background: transparent;
+}
+.tile--1 {
+  background-position: 0 25%;
+}
+.tile--2 {
+  background-position: 25% 25%;
+}
+.tile--3 {
+  background-position: 50% 25%;
+}
+.tile--4 {
+  background-position: 75% 25%;
+}
+.tile--5 {
+  background-position: 0 50%;
+}
+.tile--6 {
+  background-position: 25% 50%;
+}
+.tile--7 {
+  background-position: 50% 50%;
+}
+.tile--8 {
+  background-position: 75% 50%;
+}
+.tile--9 {
+  background-position: 0 75%;
+}
+.tile--10 {
+  background-position: 25% 75%;
+}
+.tile--11 {
+  background-position: 50% 75%;
+}
+.tile--12 {
+  background-position: 75% 75%;
+}
+.tile--13 {
+  background-position: 0% 100%;
+}
+.tile--14 {
+  background-position: 25% 100%;
+}
+.tile--15 {
+  background-position: 50% 100%;
+}
